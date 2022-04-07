@@ -1,0 +1,47 @@
+<app-wave></app-wave>
+
+<a type="button" href="home#tariffe" class="red-button book-button">Prenota ora</a>
+
+<ngb-carousel [showNavigationArrows]="showNavigationArrows"
+[showNavigationIndicators]="showNavigationIndicators" class="carousel">
+    <ng-template ngbSlide *ngFor="let image of images" class="template">
+        <div class="picsum-img-wrapper img-div">
+            <img [src]="image" alt="img"/>
+        </div>
+    </ng-template>
+</ngb-carousel>
+
+<div id="tariffe" class="fares">
+    <h2>Le nostre tariffe</h2>
+    <div class="fare">
+        <h3>Lunedì - venerdì</h3>
+        <p>
+            Intero/mezza giornata: 4€ ombrellone, 4€ lettino
+        </p>
+        <p>
+            <b>Offerta</b>: 1 ombrellone + 2 lettini a 10€
+        </p>
+    </div>
+    <div class="fare">
+        <h3>Sabato, domenica e festivi</h3>
+        <p>
+            Intero: 5€ ombrellone, 5€ lettino
+        </p>
+        <p>
+            Mezza giornata: 4€ ombrellone, 4€ lettino
+        </p>
+    </div>
+    <a type="button" href="home#pickadate" class="red-button">Sceglia la tariffa</a>
+</div>
+
+<div class="form-div" id="pickadate">
+    <h2>Scegli una data</h2>
+    <mat-card class="inline-calendar-card">
+        <mat-calendar [(selected)]="selected"></mat-calendar>
+    </mat-card>
+    <mat-select [value]="fares[0]" [formControl]="faresControl" required class="fare-select">
+        <mat-option *ngFor="let fare of fares" [value]="fare">{{fare}}</mat-option>
+    </mat-select>
+    <br>
+    <a type="button" routerLink="prenota" class="red-button book-button-2">Coming soon</a>
+</div>

@@ -1,0 +1,145 @@
+.header {
+    width: 100%;
+    height: auto;
+    background-color: #183059;
+    margin: 0;
+    padding: 10px;
+
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.header::after {
+    clear: both;
+}
+
+.navigation {
+    width: fit-content;
+    display: flex;
+    justify-content:space-between;
+    align-items:center;
+    overflow: hidden;
+    vertical-align: middle;
+    margin: 0;
+    padding: 5px;
+}
+
+.nav-link {
+    margin-left: 20px;
+    padding: 10px;
+
+    border-radius: .4rem;
+
+    background-color: transparent;
+    color: white;
+
+    text-decoration: none;
+    text-align: center;
+    font-size: 20px;
+    font-family: Roboto, sans-serif;
+
+    transition: all .5s;
+}
+
+.nav-link:hover {
+    color: #183059;
+    background-color: white;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 599px) {
+
+    .header {
+        height: fit-content;
+        flex-direction: column;
+        padding: 5px;
+    }
+
+    .navigation {
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-link {
+        margin: 5px;
+        padding: 5px;
+        font-size: 14px;
+    }
+
+    .logo-img {
+        margin-left: auto;
+        margin-right: auto;
+        padding: 10px;
+        padding-top: 0px;
+        vertical-align: middle;
+        height: auto;
+
+        max-width: 50%;
+    }
+    }
+
+    /* Small devices (portrait tablets and large phones, 600px and up) */
+    @media only screen and (min-width: 600px) {
+    .header {
+        max-height: 80px;
+    }
+
+    .logo-img {
+        margin-left: auto;
+        margin-right: 20px;        
+        padding: 10px;
+        vertical-align: middle;
+        height: min-content;
+
+        max-width: 250px;
+    }
+}
+
+
+/* Large devices (laptops/desktops, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .header {
+        height: 7%;
+    }
+
+    .logo-img {
+        margin-left: auto;
+        margin-right: 20px;
+        padding: 10px;
+        vertical-align: middle;
+        height: min-content;
+
+        max-width: 400px;
+    }
+}
+ 
+/* Extra large devices (large laptops and desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .logo-img {
+        margin-left: auto;
+        margin-right: 20px;
+        padding: 10px;
+        vertical-align: middle;
+        max-width: 40%;
+        max-height: 80%;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media screen and (min-width: 1200px) {
+
+    .header {
+        height: 15%;
+    }
+    
+    .logo-img {
+        margin-left: auto;
+        margin-right: 40px;
+        padding: 0;
+        vertical-align: middle;
+        max-width: 40%;
+        height: auto;
+    }
+}
